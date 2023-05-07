@@ -198,6 +198,9 @@ endif()
 file( GLOB PUBLIC_HEADERS "${PROJECT_BINARY_DIR}/include/openssl/*.h" )
 install( FILES ${PUBLIC_HEADERS} DESTINATION include/openssl )
 
+file( GLOB APPLINK "${CMAKE_CURRENT_SOURCE_DIR}/ms/applink.c" )
+install( FILES ${APPLINK} DESTINATION include/openssl )
+
 install( FILES
   FAQ LICENSE README README.ENGINE
   DESTINATION share/openssl )
